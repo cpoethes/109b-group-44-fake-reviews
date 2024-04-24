@@ -104,7 +104,6 @@ def classify(classifier, x_):
     
 
 # This generates an altered corpus by substituting some proportion of the words with synonyms from WordNet with the TextAttack module.
-# For each string in the corpus, it first divides the string into shingles and then uses WordNetAugmenter to substitute some words.
 # WordNetAugmenter has an average exeuction time that is proportional to exp(n) where n is the number of words in an input string, and it occasionally
 # takes an extremely long time to return even when processing a small number of words. To achieve reasonable runtime, we split each
 # string into shingles consisting of a fixed number of words and utilize a timeout.
